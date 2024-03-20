@@ -36,6 +36,7 @@ function updateScore() {
     var p1Score = document.getElementById("p1-score");
     var p2Score = document.getElementById("p2-score");
     var resultText = document.getElementById("result");
+    var checkButton = document.getElementById("check-btn");
 
     var player1Balls = document.getElementsByClassName("player1")[0].children;
     var player2Balls = document.getElementsByClassName("player2")[0].children;
@@ -62,10 +63,14 @@ function updateScore() {
     if(p1Scores.length == 5 && p2Scores.length == 5){
         if(p1Total > p2Total) {
             resultText.textContent = "Player 1 wins the Game";
+            checkButton.setAttribute("disabled", true);
+
         } else if(p1Total == p2Total) {
             resultText.textContent = "Game Tied";
+            checkButton.setAttribute("disabled", true);
         } else 
-            resultText.textContent = "Player 2 wins the Game"
+            resultText.textContent = "Player 2 wins the Game";
+            checkButton.setAttribute("disabled", true);
     }
 
 

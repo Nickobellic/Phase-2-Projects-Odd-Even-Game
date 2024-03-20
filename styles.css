@@ -45,6 +45,10 @@ body {
     background-color: orange;
 }
 
+#check-btn:disabled {
+    background-color: gray;
+}
+
 .main-content {
     display: flex;
     flex-direction: column;
